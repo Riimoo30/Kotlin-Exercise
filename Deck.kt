@@ -6,6 +6,8 @@ fun main() {
     println(student.studentId)
     student.studentId = 232
     println(student.studentId)
+    val test = School("Milano")
+    println(test)
 }
 
 class Student (val name : String, val age : Int){
@@ -18,3 +20,4 @@ class Student (val name : String, val age : Int){
             field = value
         }
 }
+data class School(open val city: String)
