@@ -1,32 +1,23 @@
 package Kotlin
 
 fun main() {
-val test = Car("Audi", "TT")
-val test2 =Car2("Fiat", "Punto")
+    val test = Car("Audi", "TT")
     println(test.name())
-    println(test2.name())
+    println(test.name2())
 }
 
+class Car(override val model : String, override val brand: String) : Named, Named2(brand) {
+
+}
 interface Named {
-    val model: String
-    val brand: String
-
-
-    fun name(): String {
-        return "Model: $model, brand: $brand, Using Interface"
+    val model :String
+    fun name(): String{
+        return "Model: $model, Using Interface"
     }
 }
-open class Named2(open val model: String,open val brand: String) {
-    fun name(): String {
-        return "Model: $model, brand: $brand, Using inheritance"
+
+open class Named2(open val brand: String) {
+    fun name2(): String {
+        return "Brand: $brand, Using Inheritance"
     }
 }
-     class Car(override val model: String, override val brand: String) : Named{
-
-
-    }
-
-    class Car2(override val model: String,override val brand: String) : Named2(model, brand) {
-    }
-
-
