@@ -1,14 +1,16 @@
 package Kotlin
 
 fun main() {
-       var list1 = value(listOf(1, 2, 3, 4, 5, 6, 7, 8, 9, 10)).forEach {
-               it-> println("$it") }
+       var list1 = listOf<Int>(1,2,3,4,5,6,7,8,9,10).filterSmaller().printValues()
 
 
 }
-    fun value(filterSmaller : List<Int>): List<Int> {
-        return filterSmaller.filter { it -> it <= 5 }
+    fun List<Int>.filterSmaller(): List<Int> {
+        return this.filter { it <= 5 }
 
     }
 
+    fun List<Int>.printValues(){
+        forEach { println(it) }
+    }
 

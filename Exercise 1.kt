@@ -1,5 +1,7 @@
 package Kotlin
 
+import java.util.stream.Stream
+
 fun main() {
     for(i in 1 ..100 step 2) {
         if(i < 50){
@@ -10,15 +12,10 @@ fun main() {
     }
 }
 
-fun oneTo50( number: Int) {
-    //loop for number from 1 to 50
-    for (i in 1..50 step 2) {
-    }
+fun oneTo50(number : Int) {
     println(number)
 }
 
 fun fiftyTo100(number: Int){
-    for(i in 50 ..100 step 2){
-    }
     println(number)
 }

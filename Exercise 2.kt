@@ -9,6 +9,7 @@ fun main() {
 class Car(override val model : String, override val brand: String) : Named, Named2(brand) {
 
 }
+
 interface Named {
     val model :String
     fun name(): String{
